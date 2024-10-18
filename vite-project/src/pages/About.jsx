@@ -10,6 +10,9 @@ export default function About() {
                         I'm a 10-year Marine Corps Veteran and am passionate about what I do.
                         Check my resume for more information about me.
                     </p>
+                    <div className="text-center">
+                        <a href="/resume" className="btn btn-primary">View Resume</a>
+                    </div>
                 </div>
             </div>
         </div>
