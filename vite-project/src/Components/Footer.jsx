@@ -1,6 +1,6 @@
-import { Link, useLocation } from 'react-router-dom'; 
+import { Link, useLocation } from 'react-router-dom';
 
-function Footer() {
+export default function Footer() {
     const currentPage = useLocation().pathname;
 
     return (
@@ -8,22 +8,17 @@ function Footer() {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/" className={currentPage === '/' ? 'active' : ''}>
+                        <a href="https://github.com/JB0341" target="_blank" rel="no opener noreferrer">
                             GitHub
-                        </Link>
+                        </a>
                     </li>
                     <li>
-                        <Link to="/about" className={currentPage === '/about' ? 'active' : ''}>
+                        <a href="https://www.linkedin.com/in/jeremy-brown-21a5bb174/" target="_blank" rel="no opener noreferrer">
                             LinkedIn
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/projects" className={currentPage === '/projects' ? 'active' : ''}>
-                            Resume
-                        </Link>
+                        </a>
                     </li>
                 </ul>
             </nav>
-        </footer>   
-    )
+        </footer>
+    );
 }
