@@ -1,19 +1,53 @@
 export default function Portfolio() {
     const projects = [
-        { id: 1, title: 'Project One', description: 'Description for project one.' },
-        { id: 2, title: 'Project Two', description: 'Description for project two.' },
-        { id: 3, title: 'Project Three', description: 'Description for project three.' },
-        { id: 4, title: 'Project Four', description: 'Description for project four.' },
+        {
+            id: 1,
+            title: 'Readme Master Am I',
+            description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+            imageUrl: 'https://media.edutopia.org/styles/responsive_2880px_16x9/s3/masters/d7_images/cover_media/barber-169hero-teachtext-twenty20.jpg',
+            link: 'https://github.com/JB0341/readme-master-am-i' 
+        },
+        {
+            id: 2,
+            title: 'Not a Youtube Rabbit Hole',
+            description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+            imageUrl: 'https://wallpapercave.com/wp/wp9570604.jpg',
+            link: 'https://github.com/JB0341/not-a-youtube-rabbit-hole' 
+        },
+        {
+            id: 3,
+            title: 'Disc Golf API',
+            description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+            imageUrl: 'https://cdn.buttercms.com/dn7G1xxcRXmEJLhVgRmA',
+            link: 'https://github.com/ut463/disk-golf-api' 
+        },
+        {
+            id: 4,
+            title: 'Law Abiding Tourist',
+            description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+            imageUrl: 'https://th.bing.com/th/id/OIP.YA-B4tYWI0TfhHGdz1vYJwHaE7?rs=1&pid=ImgDetMain',
+            link: 'https://github.com/KG8905/Law-Abiding-Tourist-'
+        },
     ];
 
     return (
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
-            {projects.map((project) => (
-                <div key={project.id} style={{ border: '1px solid #ccc', padding: '20px', width: '200px' }}>
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                </div>
-            ))}
+        <div className="container mt-5">
+            <div className="row">
+                {projects.map((project) => (
+                    <div key={project.id} className="col-md-6 mb-4">
+                        <div className="card h-100">
+                            <img src={project.imageUrl} className="card-img-top" alt={project.title} />
+                            <div className="card-body">
+                                <h5 className="card-title">{project.title}</h5>
+                                <p className="card-text">{project.description}</p>
+                                <p className="card-text">
+                                    <small className="text-body-secondary">{project.lastUpdated}</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
